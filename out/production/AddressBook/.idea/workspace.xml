@@ -1,20 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d7b90447-f004-433b-bcbf-4222aa5f3133" name="Default Changelist" comment="" />
+    <list default="true" id="d7b90447-f004-433b-bcbf-4222aa5f3133" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Testing/UnitTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/UnitTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AddressBook/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/AddressBook/AddressBook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/AddressBook/AddressBookController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/AddressBook/FileSystem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/AddressBook/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/GUI/AddressBookGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/GUI/AddressBookGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/GUI/AddressBookGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/GUI/PersonDialog$Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/GUI/PersonDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AddressBook/GUI/SpringUtilities.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Koyomi\Desktop\AddressBook\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1Yoak47xbZ3883F4umNjDbphHKu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path" value="C:\Users\Koyomi\Desktop\AddressBook\libs" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="AddressBookGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -47,28 +89,68 @@
       <option name="presentableId" value="Default" />
       <updated>1583611540402</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added testing class">
+      <created>1583716316786</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583716316786</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added testing class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added testing class" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="937" height="266" key="GridCell.Tab.0.bottom" timestamp="1583688566917">
+    <state x="614" y="134" key="CommitChangelistDialog2" timestamp="1583716315663">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="937" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583688566917" />
-    <state width="937" height="266" key="GridCell.Tab.0.center" timestamp="1583688566917">
+    <state x="614" y="134" key="CommitChangelistDialog2/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583716315663" />
+    <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1583688821285">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="937" height="266" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583688566917" />
-    <state width="937" height="266" key="GridCell.Tab.0.left" timestamp="1583688566917">
+    <state x="740" y="281" key="FileChooserDialogImpl/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583688821285" />
+    <state x="830" y="433" key="Github.ShareDialog" timestamp="1583688925823">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="937" height="266" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583688566917" />
-    <state width="937" height="266" key="GridCell.Tab.0.right" timestamp="1583688566917">
+    <state x="830" y="433" key="Github.ShareDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583688925823" />
+    <state x="738" y="245" key="Github.UntrackedFilesDialog" timestamp="1583688930739">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="937" height="266" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583688566917" />
+    <state x="738" y="245" key="Github.UntrackedFilesDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583688930739" />
+    <state width="1875" height="266" key="GridCell.Tab.0.bottom" timestamp="1583693080839">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1875" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583693080839" />
+    <state width="1875" height="266" key="GridCell.Tab.0.center" timestamp="1583693080839">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1875" height="266" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583693080839" />
+    <state width="1875" height="266" key="GridCell.Tab.0.left" timestamp="1583693080837">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1875" height="266" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583693080836" />
+    <state width="1875" height="266" key="GridCell.Tab.0.right" timestamp="1583693080839">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1875" height="266" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583693080839" />
+    <state x="552" y="261" key="Vcs.Push.Dialog.v2" timestamp="1583716319787">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="261" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583716319787" />
     <state x="655" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1583611544281">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="655" y="364" key="com.intellij.ide.util.TipDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583611544281" />
+    <state x="664" y="433" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1583716929447">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="664" y="433" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583716929447" />
+    <state x="769" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583689389521">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="769" y="457" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583689389521" />
   </component>
 </project>
