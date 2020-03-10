@@ -13,7 +13,9 @@ public class AddressBook extends AbstractTableModel {
         return persons.toArray(new Person[persons.size()]);
     }
 
-  
+
+    // Adds a Person object to the AddressBook
+    // Updates the table in GUI with new entry
     public void add(Person p) {
         int newIndex = persons.size();
         persons.add(p);
@@ -31,13 +33,18 @@ public class AddressBook extends AbstractTableModel {
         fireTableRowsUpdated(index, index);
     }
 
-  
+
+    // Removes a Person object from AddressBook
+    // Uses passed index argument to find Person
+    // Updates the table in GUI to reflect change
     public void remove(int index) {
         persons.remove(index);
         fireTableRowsDeleted(index, index);
     }
 
-   
+
+    // Returns a Person object from AddressBook
+    // Uses passed index argument to find Person
     public Person get(int index) {
         return persons.get(index);
     }

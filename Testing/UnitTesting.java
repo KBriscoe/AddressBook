@@ -1,22 +1,17 @@
 package Testing;
 
 //Testing imports
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import AddressBook.AddressBook;
+import AddressBook.Person;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
-//Modules
-import AddressBook.AddressBook;
-import AddressBook.AddressBookController;
-import AddressBook.FileSystem;
-import AddressBook.Person;
+import static org.junit.jupiter.api.Assertions.*;
 
+//Modules
 //Imports
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 
 public class UnitTesting {
@@ -54,10 +49,38 @@ public class UnitTesting {
 */
     }
 
+    // Testing creating new AddressBook and Person objects and adding Person to AddressBook
+    @Test
+    void testAddPerson() {
+        AddressBook mockBook = new AddressBook();
+        Person mockPerson = new Person("Mark", "Smith", " 1357 Java Lane",
+                "Fort Myers", "Florida", "33907", "1234567890");
+        mockBook.add(mockPerson);
+        assertEquals(mockPerson, mockBook.get(0));
+    }
+
+    // Testing creating new AddressBook and Person objects and deleting Person from AddressBook
+    @Test
+    void testDeletePerson() {
+        AddressBook mockBook = new AddressBook();
+        Person mockPerson = new Person("Mark", "John", "5567 Colonial Blvd",
+                "Fort Myers", "Florida", "33919", "9804098567");
+        mockBook.add(mockPerson);
+        mockBook.remove(0);
+        assertThrows(IndexOutOfBoundsException.class, () -> mockBook.get(0));
+    }
+
     @ParameterizedTest
-    @ValueSource(strings = {"12345 House Rd", "9594 Community Lane", "error"})
-    void testPersonInput(String input) {
-        String addressPattern = "(\\d{1,5}\\s\\w+\\s\\w+)";
+    @ValueSource(strings = {"12345 House Rd", "9594 Community Lane", "123 Address Cir"})
+    void testPersonAddressInput(String input) {
+        String addressPattern = "(\\d{1,5}\\s([a-z]|[A-Z])+\\s([a-z]|[A-Z])+)";
         assertTrue(input.matches(addressPattern));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"error", "#$%$ Community Lane", "123 1234 123445"})
+    void testPersonNegativeAddressInput(String input) {
+        String addressPattern = "(\\d{1,5}\\s([a-z]|[A-Z])+\\s([a-z]|[A-Z])+)";
+        assertFalse(input.matches(addressPattern));
     }
 }

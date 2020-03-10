@@ -24,7 +24,8 @@ public class Person {
     private String zip;
     private String phone;
 
- 
+
+    // Person object constructor, takes arguments as strings and creates new Person object
     public Person(String firstName, String lastName, String address, String city, String state, String zip, String phone) {
         if (firstName == null || firstName.isEmpty())
             throw new IllegalArgumentException("First name cannot be empty");
