@@ -4,10 +4,17 @@ import AddressBook.AddressBook;
 import AddressBook.Person;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class AddressBookTesting {
+    @Test
+    void testCreateAddressBook(){
+        //Create new addressbook object
+        AddressBook mockAddressBook = new AddressBook();
+        //Assert that the class created matches the class Addressbook
+        assertEquals((new AddressBook().getClass()), mockAddressBook.getClass());
+    }
+
     // Testing creating new AddressBook and Person objects and adding Person to AddressBook
     @Test
     void testAddPerson() {
