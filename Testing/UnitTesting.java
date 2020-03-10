@@ -1,8 +1,6 @@
 package Testing;
 
 //Testing imports
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -17,6 +15,8 @@ import AddressBook.Person;
 //Imports
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class UnitTesting {
@@ -55,9 +55,16 @@ public class UnitTesting {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"12345 House Rd", "9594 Community Lane", "error"})
-    void testPersonInput(String input) {
-        String addressPattern = "(\\d{1,5}\\s\\w+\\s\\w+)";
+    @ValueSource(strings = {"12345 House Rd", "9594 Community Lane", "123 Address Cir"})
+    void testPersonAddressInput(String input) {
+        String addressPattern = "(\\d{1,5}\\s[a-z]+\\s[a-z]+)";
         assertTrue(input.matches(addressPattern));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"error", "#$%$ Community Lane", "123 1234 123445"})
+    void testPersonNegativeAddressInput(String input) {
+        String addressPattern = "(\\d{1,5}\\s[a-z]+\\s[a-z]+)";
+        assertFalse(input.matches(addressPattern));
     }
 }
