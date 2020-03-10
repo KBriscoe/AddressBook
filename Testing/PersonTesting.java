@@ -1,7 +1,5 @@
 package Testing;
 
-//Testing imports
-
 import AddressBook.AddressBook;
 import AddressBook.Person;
 import org.junit.jupiter.api.Test;
@@ -10,11 +8,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-//Modules
-//Imports
-
-
-public class UnitTesting {
+public class PersonTesting {
 
     @Test
     void testPerson() {
@@ -49,27 +43,7 @@ public class UnitTesting {
 */
     }
 
-    // Testing creating new AddressBook and Person objects and adding Person to AddressBook
-    @Test
-    void testAddPerson() {
-        AddressBook mockBook = new AddressBook();
-        Person mockPerson = new Person("Mark", "Smith", " 1357 Java Lane",
-                "Fort Myers", "Florida", "33907", "1234567890");
-        mockBook.add(mockPerson);
-        assertEquals(mockPerson, mockBook.get(0));
-    }
-
-    // Testing creating new AddressBook and Person objects and deleting Person from AddressBook
-    @Test
-    void testDeletePerson() {
-        AddressBook mockBook = new AddressBook();
-        Person mockPerson = new Person("Mark", "John", "5567 Colonial Blvd",
-                "Fort Myers", "Florida", "33919", "9804098567");
-        mockBook.add(mockPerson);
-        mockBook.remove(0);
-        assertThrows(IndexOutOfBoundsException.class, () -> mockBook.get(0));
-    }
-
+    //Testing valid address input in format: 1-5 numbers space word space word
     @ParameterizedTest
     @ValueSource(strings = {"12345 House Rd", "9594 Community Lane", "123 Address Cir"})
     void testPersonAddressInput(String input) {
@@ -77,6 +51,7 @@ public class UnitTesting {
         assertTrue(input.matches(addressPattern));
     }
 
+    //Testing invalid address input
     @ParameterizedTest
     @ValueSource(strings = {"error", "#$%$ Community Lane", "123 1234 123445"})
     void testPersonNegativeAddressInput(String input) {
