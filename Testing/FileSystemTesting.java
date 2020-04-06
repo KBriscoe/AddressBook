@@ -1,6 +1,7 @@
 package Testing;
 
 import AddressBook.AddressBook;
+import AddressBook.AddressBookController;
 import AddressBook.Person;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -13,30 +14,33 @@ import java.util.stream.Stream;
 
 public class FileSystemTesting {
 
-    //Mock Save Function for Load Test
-    private static Stream<Arguments> mockSaveAddressBook() {
-        AddressBook mockAddressBook = new AddressBook();
-        File file = new File("test_outputs/testfile.txt");
+    //Mock inputs for Save Test - Stub to test save function
+    private static Stream<Arguments> mockSaveAddressBookInputs() {
+        AddressBook mockAddressBook = createMockAddressBookObject();
+        File file = createMockFileObject();
         return Stream.of(Arguments.of(mockAddressBook, file));
     }
 
-    @ParameterizedTest
-    @MethodSource("mockSaveAddressBook")
-    public void saveFile(AddressBook addressBook, File file) throws IOException, SQLException {
-        // Create the table structure using the mock file path
-        Connection connection = DriverManager.getConnection("jdbc:sqlite:" + file.getAbsolutePath());
-        Statement statement = connection.createStatement();
-        statement.execute("DROP TABLE IF EXISTS persons");
-        statement.execute("CREATE TABLE persons (firstName TEXT, lastName TEXT, address TEXT, city TEXT, state TEXT, zip TEXT, phone TEXT)");
-        // Insert the data into the database
-        PreparedStatement insert = connection.prepareStatement("INSERT INTO persons (lastName, firstName, address, city, state, zip, phone) VALUES (?, ?, ?, ?, ?, ?, ?)");
-        for (Person p : addressBook.getPersons()) {
-            for (int i = 0; i < Person.fields.length; i++) {
-                insert.setString(i + 1, p.getField(i));
-            }
-            insert.executeUpdate();
-        }
+    //this method creates a mock Addressbook with a person in it
+    private static AddressBook createMockAddressBookObject(){
+        AddressBook mockAddressBook = new AddressBook();
+        Person mockPerson = new Person("Mark", "John", "5567 Colonial Blvd",
+                "Fort Myers", "Florida", "33919", "9804098567");
+        mockAddressBook.add(mockPerson);
+        return mockAddressBook;
+    }
 
-        connection.close();
+    //this method creates a mock File object with the testing output path
+    private static File createMockFileObject() {
+        File file = new File("test_outputs/testfile");
+        return file;
+    }
+
+    //this function tests the save file function using the input mock stub
+    @ParameterizedTest
+    @MethodSource("mockSaveAddressBookInputs")
+    public void testSaveFile(AddressBook mockAddressBook, File file) throws IOException, SQLException {
+        AddressBookController mockController = new AddressBookController(mockAddressBook);
+        mockController.save(file);
     }
 }
