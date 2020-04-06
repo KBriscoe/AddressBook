@@ -2,6 +2,7 @@ package AddressBook;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 
 /**
@@ -39,7 +40,7 @@ public class AddressBookController {
         addressBook.fireTableDataChanged();
     }
 
-    public void save(File file) throws SQLException {
+    public void save(File file) throws SQLException, IOException {
         new FileSystem().saveFile(addressBook, file);
     }
 

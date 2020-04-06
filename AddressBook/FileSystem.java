@@ -11,7 +11,7 @@ public class FileSystem {
         if (!file.exists() || !file.canRead()) {
             throw new FileNotFoundException();
         }
-       
+
         Connection connection = DriverManager.getConnection("jdbc:sqlite:" + file.getAbsolutePath());
         ResultSet rs = connection.createStatement().executeQuery("SELECT lastName, firstName, address, city, state, zip, phone FROM persons");
         // Clear the current AddressBook contents
@@ -28,7 +28,7 @@ public class FileSystem {
                     rs.getString("phone"));
             addressBook.add(p);
         }
-      
+
         connection.close();
     }
 
@@ -47,7 +47,7 @@ public class FileSystem {
             }
             insert.executeUpdate();
         }
-        
+
         connection.close();
     }
 }

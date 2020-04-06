@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b90447-f004-433b-bcbf-4222aa5f3133" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Testing/AddressBookTesting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Testing/PersonTesting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Testing/UnitTesting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing/AddressBookControllerTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/AddressBookControllerTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Testing/PersonTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/Testing/PersonTesting.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="333" />
+    <option name="myElementSize" value="274" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -53,16 +52,49 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.All in AddressBook">
-    <configuration name="AddressBookGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.AddressBookGUI" />
+  <component name="RunManager" selected="JUnit.PersonTesting.testPersonNegativePhoneInput">
+    <configuration name="AddressBook in AddressBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AddressBook" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.*" />
+          <option name="PATTERN" value="AddressBook.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="AddressBook" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddressBookControllerTesting.testEditPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AddressBook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Testing" />
+      <option name="MAIN_CLASS_NAME" value="Testing.AddressBookControllerTesting" />
+      <option name="METHOD_NAME" value="testEditPerson" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddressBookGUITesting.TestGUICreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AddressBook" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Testing" />
+      <option name="MAIN_CLASS_NAME" value="Testing.AddressBookGUITesting" />
+      <option name="METHOD_NAME" value="TestGUICreation" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -75,7 +107,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnitTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonTesting.testPersonNegativePhoneInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AddressBook" />
       <extension name="coverage">
         <pattern>
@@ -84,39 +116,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Testing" />
-      <option name="MAIN_CLASS_NAME" value="Testing.UnitTesting" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UnitTesting.testPersonAddressInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AddressBook" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Testing" />
-      <option name="MAIN_CLASS_NAME" value="Testing.UnitTesting" />
-      <option name="METHOD_NAME" value="testPersonAddressInput(java.lang.String)" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UnitTesting.testPersonNegativeAddressInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AddressBook" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Testing" />
-      <option name="MAIN_CLASS_NAME" value="Testing.UnitTesting" />
-      <option name="METHOD_NAME" value="testPersonNegativeAddressInput(java.lang.String)" />
+      <option name="MAIN_CLASS_NAME" value="Testing.PersonTesting" />
+      <option name="METHOD_NAME" value="testPersonNegativePhoneInput(java.lang.String)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -124,11 +125,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PersonTesting.testPersonNegativePhoneInput" />
         <item itemvalue="JUnit.All in AddressBook" />
-        <item itemvalue="JUnit.UnitTesting" />
-        <item itemvalue="JUnit.UnitTesting.testPersonAddressInput" />
-        <item itemvalue="Application.AddressBookGUI" />
-        <item itemvalue="JUnit.UnitTesting.testPersonNegativeAddressInput" />
+        <item itemvalue="JUnit.AddressBook in AddressBook" />
+        <item itemvalue="JUnit.AddressBookControllerTesting.testEditPerson" />
+        <item itemvalue="JUnit.AddressBookGUITesting.TestGUICreation" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +179,21 @@
       <option name="project" value="LOCAL" />
       <updated>1583802648197</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="structure changes">
+      <created>1583804487003</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1583804487003</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Added AddressBookController Tests">
+      <created>1583807731208</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1583807731208</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -187,17 +202,19 @@
     <MESSAGE value="Added address input test" />
     <MESSAGE value="Added address input test 2" />
     <MESSAGE value="On hold" />
-    <option name="LAST_COMMIT_MESSAGE" value="On hold" />
+    <MESSAGE value="structure changes" />
+    <MESSAGE value="Added AddressBookController Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added AddressBookController Tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="808" y="429" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1583803100265">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="808" y="429" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583803100265" />
-    <state x="614" y="134" key="CommitChangelistDialog2" timestamp="1583802648203">
+    <state x="614" y="134" key="CommitChangelistDialog2" timestamp="1583807730375">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="614" y="134" key="CommitChangelistDialog2/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583802648203" />
+    <state x="614" y="134" key="CommitChangelistDialog2/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583807730375" />
     <state x="740" y="281" key="FileChooserDialogImpl" timestamp="1583802965773">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -210,30 +227,30 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="738" y="245" key="Github.UntrackedFilesDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583688930739" />
-    <state width="1875" height="266" key="GridCell.Tab.0.bottom" timestamp="1583802648314">
+    <state width="1875" height="266" key="GridCell.Tab.0.bottom" timestamp="1583879373055">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1875" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583802648314" />
-    <state width="1875" height="266" key="GridCell.Tab.0.center" timestamp="1583802648314">
+    <state width="1875" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583879373055" />
+    <state width="1875" height="266" key="GridCell.Tab.0.center" timestamp="1583879373054">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1875" height="266" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583802648314" />
-    <state width="1875" height="266" key="GridCell.Tab.0.left" timestamp="1583802648314">
+    <state width="1875" height="266" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583879373054" />
+    <state width="1875" height="266" key="GridCell.Tab.0.left" timestamp="1583879373054">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1875" height="266" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583802648314" />
-    <state width="1875" height="266" key="GridCell.Tab.0.right" timestamp="1583802648314">
+    <state width="1875" height="266" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583879373054" />
+    <state width="1875" height="266" key="GridCell.Tab.0.right" timestamp="1583879373054">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1875" height="266" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583802648314" />
+    <state width="1875" height="266" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583879373054" />
     <state x="741" y="251" key="RollbackChangesDialog" timestamp="1583802931843">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="741" y="251" key="RollbackChangesDialog/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583802931843" />
-    <state x="552" y="261" key="Vcs.Push.Dialog.v2" timestamp="1583799308921">
+    <state x="552" y="261" key="Vcs.Push.Dialog.v2" timestamp="1583807738344">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="552" y="261" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583799308921" />
+    <state x="552" y="261" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1583807738344" />
     <state x="655" y="364" key="com.intellij.ide.util.TipDialog" timestamp="1583611544281">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -263,9 +280,12 @@
     <SUITE FILE_PATH="coverage/AddressBook$UnitTesting.ic" NAME="UnitTesting Coverage Results" MODIFIED="1583800834369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>Testing.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/AddressBook$All_in_AddressBook.ic" NAME="All in AddressBook Coverage Results" MODIFIED="1583801243987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/AddressBook$All_in_AddressBook.ic" NAME="All in AddressBook Coverage Results" MODIFIED="1583817286781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/AddressBook$AddressBookGUI.ic" NAME="AddressBookGUI Coverage Results" MODIFIED="1583800406338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>GUI.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/AddressBook$AddressBook_in_AddressBook.ic" NAME="AddressBook in AddressBook Coverage Results" MODIFIED="1583817258270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>AddressBook.*</FILTER>
     </SUITE>
   </component>
 </project>
