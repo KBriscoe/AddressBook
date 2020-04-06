@@ -58,4 +58,21 @@ public class PersonTesting {
         String addressPattern = "(\\d{1,5}\\s([a-z]|[A-Z])+\\s([a-z]|[A-Z])+)";
         assertFalse(input.matches(addressPattern));
     }
+
+    //Testing valid phone input
+    @ParameterizedTest
+    @ValueSource(strings = {"(233)-344-5555", "123-456-789", "1231234123445"})
+    void testPersonPhoneInput(String input) {
+        String phonePattern = "((\\d|\\-|\\(|\\)|\\s)+)";
+        assertTrue(input.matches(phonePattern));
+    }
+
+    //Testing valid phone input
+    @ParameterizedTest
+    @ValueSource(strings = {"123 333 abc", "1^&$$$#%#@", "not a phone number"})
+    void testPersonNegativePhoneInput(String input) {
+        String phonePattern = "((\\d|\\-|\\(|\\)|\\s)+)";
+        assertFalse(input.matches(phonePattern));
+    }
+
 }

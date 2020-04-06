@@ -19,6 +19,7 @@ public class AddressBookControllerTesting {
                 "Fort Myers", "Florida", "33919", "9804098567");
         //Use set to adjust mockPerson to edited mockPerson
         mockAddressBook.set(0, editedMockPerson);
+        //Check that the updated person is equal to our edited Person
         assertEquals(mockAddressBook.get(0), editedMockPerson);
     }
 }
