@@ -60,4 +60,17 @@ public class AddressBookTesting {
         //Check that the updated person is equal to our edited Person
         assertEquals(mockAddressBook.get(0), editedMockPerson);
     }
+
+    @Test
+    void testClearAll(){
+        AddressBook mockAddressBook = new AddressBook();
+        //Attempt clear on empty address book
+        assertDoesNotThrow(() -> mockAddressBook.clear());
+        Person mockPerson = new Person("Mark", "John", "5567 Colonial Blvd",
+                "Fort Myers", "Florida", "33919", "9804098567");
+        //Add person to mockAddressBook
+        mockAddressBook.add(mockPerson);
+        //Attempt clear on filled address book
+        assertDoesNotThrow(() -> mockAddressBook.clear());
+    }
 }

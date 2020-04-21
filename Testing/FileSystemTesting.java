@@ -9,9 +9,13 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.*;
 import java.util.stream.Stream;
+
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class FileSystemTesting {
 
@@ -25,6 +29,12 @@ public class FileSystemTesting {
     private static Stream<Arguments> mockLoadAddressBookInputs() {
         AddressBook mockAddressBook = createMockAddressBookObject();
         File file = createMockFileObject();
+        return Stream.of(Arguments.of(mockAddressBook, file));
+    }
+
+    private static Stream<Arguments> mockFailAddressBookInputs() {
+        AddressBook mockAddressBook = createMockAddressBookObject();
+        File file = new File("fakelocation");
         return Stream.of(Arguments.of(mockAddressBook, file));
     }
 
@@ -48,14 +58,22 @@ public class FileSystemTesting {
     @MethodSource("mockSaveAddressBookInputs")
     public void testSaveFile(AddressBook mockAddressBook, File file) throws IOException, SQLException {
         AddressBookController mockController = new AddressBookController(mockAddressBook);
-        mockController.save(file);
+        assertDoesNotThrow(() -> mockController.save(file));
     }
 
     //this function tests the save file function using the input mock stub
     @ParameterizedTest
-    @MethodSource("mockSaveAddressBookInputs")
+    @MethodSource("mockLoadAddressBookInputs")
     public void testLoadFile(AddressBook mockAddressBook, File file) throws IOException, SQLException {
-        new FileSystem().readFile(mockAddressBook, file);
+        AddressBookController mockController = new AddressBookController(mockAddressBook);
+        mockController.save(file);
+        assertDoesNotThrow(() -> new FileSystem().readFile(mockAddressBook, file));
+    }
+
+    @ParameterizedTest
+    @MethodSource("mockFailAddressBookInputs")
+    public void testFailLoadFile(AddressBook mockAddressBook, File file) throws IOException, SQLException {
+        assertThrows(FileNotFoundException.class, () -> new FileSystem().readFile(mockAddressBook, file));
     }
 
 
