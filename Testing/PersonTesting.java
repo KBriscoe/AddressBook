@@ -92,6 +92,32 @@ public class PersonTesting {
     }
 
     @Test
+    void testGets(){
+        Person mockPerson = new Person("Mark", "Reynold", "12345 Address Road",
+                "City Name", "State Name", "12345", "1-234-567-8910");
+        assertEquals("Reynold", mockPerson.getLastName());
+        assertEquals("Mark", mockPerson.getFirstName());
+        assertEquals("12345 Address Road", mockPerson.getAddress());
+        assertEquals("City Name", mockPerson.getCity());
+        assertEquals("State Name", mockPerson.getState());
+        assertEquals("12345", mockPerson.getZip());
+        assertEquals("1-234-567-8910", mockPerson.getPhone());
+    }
+
+    @Test
+    void testValidCaseNumber(){
+        Person mockPerson = new Person("Mark", "Reynold", "12345 Address Road",
+                "City Name", "State Name", "12345", "1-234-567-8910");
+        assertEquals("Reynold", mockPerson.getField(0));
+        assertEquals("Mark", mockPerson.getField(1));
+        assertEquals("12345 Address Road", mockPerson.getField(2));
+        assertEquals("City Name", mockPerson.getField(3));
+        assertEquals("State Name", mockPerson.getField(4));
+        assertEquals("12345", mockPerson.getField(5));
+        assertEquals("1-234-567-8910", mockPerson.getField(6));
+    }
+
+    @Test
     void testOOBCaseNumber(){
         Person mockPerson = new Person("Mark", "Reynold", "12345 Address Road",
                 "City Name", "State Name", "12345", "1-234-567-8910");

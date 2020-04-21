@@ -73,4 +73,36 @@ public class AddressBookTesting {
         //Attempt clear on filled address book
         assertDoesNotThrow(() -> mockAddressBook.clear());
     }
+
+    @Test
+    void testGetCount(){
+        AddressBook mockAddressBook = new AddressBook();
+        Person mockPerson = new Person("Mark", "John", "5567 Colonial Blvd",
+                "Fort Myers", "Florida", "33919", "9804098567");
+        //Add person to mockAddressBook
+        mockAddressBook.add(mockPerson);
+        assertEquals(1, mockAddressBook.getRowCount());
+        //Each person has 7 attributes
+        assertEquals(7, mockAddressBook.getColumnCount());
+    }
+
+    @Test
+    void testGetValueAt(){
+        AddressBook mockAddressBook = new AddressBook();
+        Person mockPerson = new Person("Mark", "John", "5567 Colonial Blvd",
+                "Fort Myers", "Florida", "33919", "9804098567");
+        //Add person to mockAddressBook
+        mockAddressBook.add(mockPerson);
+        assertEquals(mockPerson.getFirstName(), mockAddressBook.getValueAt(0,1));
+    }
+
+    @Test
+    void testGetColumnName(){
+        AddressBook mockAddressBook = new AddressBook();
+        Person mockPerson = new Person("Mark", "John", "5567 Colonial Blvd",
+                "Fort Myers", "Florida", "33919", "9804098567");
+        //Add person to mockAddressBook
+        mockAddressBook.add(mockPerson);
+        assertEquals("Last Name", mockAddressBook.getColumnName(0));
+    }
 }
