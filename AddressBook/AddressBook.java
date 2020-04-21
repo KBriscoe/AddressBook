@@ -53,7 +53,8 @@ public class AddressBook extends AbstractTableModel {
      * Clears this address book.
      */
     public void clear() {
-        if (persons == null || persons.size() == 0) {
+        //Persons is never null, the array is ALWAYS initialized to 0
+        if (/*persons == null ||*/ persons.size() == 0) {
             return;
         }
         fireTableRowsDeleted(0, persons.size() - 1);

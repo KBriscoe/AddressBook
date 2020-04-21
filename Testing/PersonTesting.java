@@ -70,4 +70,32 @@ public class PersonTesting {
         assertFalse(input.matches(zipPattern));
     }
 
+    @Test
+    void testPersonAsString(){
+        Person mockPerson = new Person("Mark", "Reynold", "12345 Address Road",
+                "City Name", "State Name", "12345", "1-234-567-8910");
+        //We expect Last, First
+        assertEquals("Reynold, Mark", mockPerson.toString());
+    }
+
+    @Test
+    void testFindInPerson(){
+        Person mockPerson = new Person("Mark", "Reynold", "12345 Address Road",
+                "City Name", "State Name", "12345", "1-234-567-8910");
+        assertTrue(mockPerson.containsString("Mark"));
+        assertTrue(mockPerson.containsString("Reynold"));
+        assertTrue(mockPerson.containsString("12345 Address Road"));
+        assertTrue(mockPerson.containsString("City Name"));
+        assertTrue(mockPerson.containsString("State Name"));
+        assertTrue(mockPerson.containsString("12345"));
+        assertTrue(mockPerson.containsString("1-234-567-8910"));
+    }
+
+    @Test
+    void testOOBCaseNumber(){
+        Person mockPerson = new Person("Mark", "Reynold", "12345 Address Road",
+                "City Name", "State Name", "12345", "1-234-567-8910");
+        assertThrows(IllegalArgumentException.class, () -> mockPerson.getField(7));
+    }
+
 }
