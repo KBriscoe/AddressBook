@@ -45,6 +45,9 @@ public class AddressBookGUI extends JFrame {
     private final JMenuItem printItem = new JMenuItem("Print", 'P');
     private final JMenuItem quitItem = new JMenuItem("Exit", 'X');
     private final JTextField searchTextField = new JTextField("");
+    private String addressPattern = "(\\d{1,5}\\s([a-z]|[A-Z])+\\s([a-z]|[A-Z])+)";
+    private String phonePattern = "((\\d|\\-|\\(|\\)|\\s)+)";
+    private String zipPattern = "(\\d{1,5}){1}";
 
     private File currentFile = null;
 
@@ -172,7 +175,12 @@ public class AddressBookGUI extends JFrame {
             if (dialog.showDialog() != PersonDialog.Result.OK || dialog.getPerson() == null) {
                 return;
             }
-            controller.add(dialog.getPerson());
+            //Check inputs
+            Person person = dialog.getPerson();
+            if(!person.getAddress().matches(addressPattern)){return;}
+            if(!person.getZip().matches(zipPattern)){return;}
+            if(!person.getPhone().matches(phonePattern)){return;}
+            controller.add(person);
             saveItem.setEnabled(true);
         });
         addEditDelPanel.add(addButton);

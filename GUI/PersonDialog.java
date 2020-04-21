@@ -35,6 +35,7 @@ public class PersonDialog extends JDialog {
         l = new JLabel("First name:", JLabel.TRAILING);
         p.get().add(l);
         firstName = new JTextField(20);
+        firstName.setName("firstName");
         l.setLabelFor(firstName);
         p.get().add(firstName);
 
@@ -42,6 +43,7 @@ public class PersonDialog extends JDialog {
         l = new JLabel("Last name:", JLabel.TRAILING);
         p.get().add(l);
         lastName = new JTextField(20);
+        lastName.setName("lastName");
         l.setLabelFor(lastName);
         p.get().add(lastName);
 
@@ -49,6 +51,7 @@ public class PersonDialog extends JDialog {
         l = new JLabel("Address:", JLabel.TRAILING);
         p.get().add(l);
         address = new JTextField(20);
+        address.setName("address");
         l.setLabelFor(address);
         p.get().add(address);
 
@@ -56,6 +59,7 @@ public class PersonDialog extends JDialog {
         l = new JLabel("City:", JLabel.TRAILING);
         p.get().add(l);
         city = new JTextField(20);
+        city.setName("city");
         l.setLabelFor(city);
         p.get().add(city);
 
@@ -63,12 +67,14 @@ public class PersonDialog extends JDialog {
         l = new JLabel("State:", JLabel.TRAILING);
         p.get().add(l);
         state = new JTextField(20);
+        state.setName("state");
         l.setLabelFor(state);
         p.get().add(state);
 
         l = new JLabel("ZIP code:", JLabel.TRAILING);
         p.get().add(l);
         zip = new JTextField(20);
+        zip.setName("zip");
         l.setLabelFor(zip);
         p.get().add(zip);
 
@@ -76,6 +82,7 @@ public class PersonDialog extends JDialog {
         l = new JLabel("Telephone:", JLabel.TRAILING);
         p.get().add(l);
         phone = new JTextField(20);
+        phone.setName("phone");
         l.setLabelFor(phone);
         p.get().add(phone);
 
@@ -85,6 +92,7 @@ public class PersonDialog extends JDialog {
         // Set up the buttons
         JPanel buttons = new JPanel();
         JButton okButton = new JButton("OK");
+        okButton.setName("okButton");
         okButton.setMnemonic('O');
         okButton.addActionListener(e ->
         {
@@ -93,6 +101,7 @@ public class PersonDialog extends JDialog {
         });
         buttons.add(okButton);
         JButton cancelButton = new JButton("Cancel");
+        cancelButton.setName("cancelButton");
         cancelButton.setMnemonic('C');
         cancelButton.addActionListener(e ->
         {

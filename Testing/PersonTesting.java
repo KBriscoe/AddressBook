@@ -11,6 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PersonTesting {
 
     @Test
+    //Test required fields
     void testPerson() {
         //Testing missing first name
         assertThrows(IllegalArgumentException.class, () -> new Person("", "Name", "12345 Address Road",
@@ -19,28 +20,6 @@ public class PersonTesting {
         //Testing missing last name
         assertThrows(IllegalArgumentException.class, () -> new Person("Test", "", "12345 Address Road",
                 "City Name", "State Name", "12345", "1-234-567-8910"));
-/*
-        //Testing missing address
-        assertThrows(IllegalArgumentException.class, () -> new Person("Test", "Name", "",
-                "City Name", "State Name", "12345", "1-234-567-8910"));
-
-        //Testing missing city
-        assertThrows(IllegalArgumentException.class, () -> new Person("Test", "Name", "12345 Address Road",
-                "", "State Name", "12345", "1-234-567-8910"));
-
-        //Testing missing state
-        assertThrows(IllegalArgumentException.class, () -> new Person("Test", "Name", "12345 Address Road",
-                "City Name", "", "12345", "1-234-567-8910"));
-
-        //Testing missing zip
-        assertThrows(IllegalArgumentException.class, () -> new Person("Test", "Name", "12345 Address Road",
-                "City Name", "State Name", "", "1-234-567-8910"));
-
-        //Testing missing phone number
-        assertThrows(IllegalArgumentException.class, () -> new Person("Test", "Name", "12345 Address Road",
-                "City Name", "State Name", "12345", ""));
-
-*/
     }
 
     //Testing valid address input in format: 1-5 numbers space word space word
@@ -67,12 +46,28 @@ public class PersonTesting {
         assertTrue(input.matches(phonePattern));
     }
 
-    //Testing valid phone input
+    //Testing invalid phone input
     @ParameterizedTest
     @ValueSource(strings = {"123 333 abc", "1^&$$$#%#@", "not a phone number"})
     void testPersonNegativePhoneInput(String input) {
         String phonePattern = "((\\d|\\-|\\(|\\)|\\s)+)";
         assertFalse(input.matches(phonePattern));
+    }
+
+    //Testing valid zip input
+    @ParameterizedTest
+    @ValueSource(strings = {"12345", "33366", "012"})
+    void testPersonZipInput(String input) {
+        String zipPattern = "(\\d{1,5}){1}";
+        assertTrue(input.matches(zipPattern));
+    }
+
+    //Testing invalid zip input
+    @ParameterizedTest
+    @ValueSource(strings = {"123 333 abc", "1^&$$$#%#@", "not a zip"})
+    void testPersonNegativeZipInput(String input) {
+        String zipPattern = "(\\d{1,5}){1}";
+        assertFalse(input.matches(zipPattern));
     }
 
 }

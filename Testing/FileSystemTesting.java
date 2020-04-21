@@ -3,6 +3,7 @@ package Testing;
 import AddressBook.AddressBook;
 import AddressBook.AddressBookController;
 import AddressBook.Person;
+import AddressBook.FileSystem;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -16,6 +17,12 @@ public class FileSystemTesting {
 
     //Mock inputs for Save Test - Stub to test save function
     private static Stream<Arguments> mockSaveAddressBookInputs() {
+        AddressBook mockAddressBook = createMockAddressBookObject();
+        File file = createMockFileObject();
+        return Stream.of(Arguments.of(mockAddressBook, file));
+    }
+
+    private static Stream<Arguments> mockLoadAddressBookInputs() {
         AddressBook mockAddressBook = createMockAddressBookObject();
         File file = createMockFileObject();
         return Stream.of(Arguments.of(mockAddressBook, file));
@@ -43,4 +50,13 @@ public class FileSystemTesting {
         AddressBookController mockController = new AddressBookController(mockAddressBook);
         mockController.save(file);
     }
+
+    //this function tests the save file function using the input mock stub
+    @ParameterizedTest
+    @MethodSource("mockSaveAddressBookInputs")
+    public void testLoadFile(AddressBook mockAddressBook, File file) throws IOException, SQLException {
+        new FileSystem().readFile(mockAddressBook, file);
+    }
+
+
 }
