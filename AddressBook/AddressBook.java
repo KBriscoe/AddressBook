@@ -68,9 +68,7 @@ public class AddressBook extends AbstractTableModel {
     }
 
   
-    public int getColumnCount() {
-        return Person.fields.length;
-    }
+    public int getColumnCount() { return Person.fields.length; }
 
 
     @Override

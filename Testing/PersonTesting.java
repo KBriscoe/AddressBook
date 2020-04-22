@@ -48,7 +48,7 @@ public class PersonTesting {
 
     //Testing invalid phone input
     @ParameterizedTest
-    @ValueSource(strings = {"123 333 abc", "1^&$$$#%#@", "not a phone number"})
+    @ValueSource(strings = {"123 333 $$$", "12$/2234565", "1234abc", "not a phone number"})
     void testPersonNegativePhoneInput(String input) {
         String phonePattern = "((\\d|\\-|\\(|\\)|\\s)+)";
         assertFalse(input.matches(phonePattern));
@@ -56,7 +56,7 @@ public class PersonTesting {
 
     //Testing valid zip input
     @ParameterizedTest
-    @ValueSource(strings = {"12345", "33366", "012"})
+    @ValueSource(strings = {"1", "32", "234", "2345", "01246"})
     void testPersonZipInput(String input) {
         String zipPattern = "(\\d{1,5}){1}";
         assertTrue(input.matches(zipPattern));
@@ -64,7 +64,7 @@ public class PersonTesting {
 
     //Testing invalid zip input
     @ParameterizedTest
-    @ValueSource(strings = {"123 333 abc", "1^&$$$#%#@", "not a zip"})
+    @ValueSource(strings = {"1233331111", "1^&$23$$#%4#@", "*##@$*(@&#", "not a zip 23465", "another invalid string"})
     void testPersonNegativeZipInput(String input) {
         String zipPattern = "(\\d{1,5}){1}";
         assertFalse(input.matches(zipPattern));
